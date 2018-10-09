@@ -58,7 +58,7 @@ if (hours == 0) {
 hours = 12;
 }
 
-bot.editChannel(id, { name : "Time" + "الوقت : " + hours + ":" + minutes + " " + suffix + "."});
+bot.editChannel(id, { name : "" + "الوقت : " + hours + ":" + minutes + " " + suffix + "."});
 }, 60000);
 
 }
