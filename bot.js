@@ -1,28 +1,29 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Eris = require("eris");
-client.connect(process.env.BOT_TOKEN);
+const BT  = new Eris(process.env.BOT_TOKEN);
+BT.connect(process.env.BOT_TOKEN)
 var iiserver = "498956631501963264";
 var smart= new Eris(process.env.BOT_TOKEN);
 
-client.on("ready", ready => {
+BT.on("ready", ready => {
 setInterval(function(){
 
-client.editChannel("498972753114824714", {name : "W"})
-client.editChannel("498972753114824714", {name : "We"})
-client.editChannel("498972753114824714", {name : "Wel"})
-client.editChannel("498972753114824714", {name : "Welc"})
-client.editChannel("498972753114824714", {name : "Welcom"})
-client.editChannel("498972753114824714", {name : "Welcome"})
-client.editChannel("498972753114824714", {name : "Welcome T"})
-client.editChannel("498972753114824714", {name : "Welcome To"})
-client.editChannel("498972753114824714", {name : "Welcome To G"})
-client.editChannel("498972753114824714", {name : "Welcome To Gr"})
-client.editChannel("498972753114824714", {name : "Welcome To Gra"})
-client.editChannel("498972753114824714", {name : "Welcome To Grap"})
-client.editChannel("498972753114824714", {name : "Welcome To Graph"})
-client.editChannel("498972753114824714", {name : "Welcome To Graphi"})
-client.editChannel("498972753114824714", {name : "Welcome To Graphic"})
+BT.editChannel("498972753114824714", {name : "W"})
+BT.editChannel("498972753114824714", {name : "We"})
+BT.editChannel("498972753114824714", {name : "Wel"})
+BT.editChannel("498972753114824714", {name : "Welc"})
+BT.editChannel("498972753114824714", {name : "Welcom"})
+BT.editChannel("498972753114824714", {name : "Welcome"})
+BT.editChannel("498972753114824714", {name : "Welcome T"})
+BT.editChannel("498972753114824714", {name : "Welcome To"})
+BT.editChannel("498972753114824714", {name : "Welcome To G"})
+BT.editChannel("498972753114824714", {name : "Welcome To Gr"})
+BT.editChannel("498972753114824714", {name : "Welcome To Gra"})
+BT.editChannel("498972753114824714", {name : "Welcome To Grap"})
+BT.editChannel("498972753114824714", {name : "Welcome To Graph"})
+BT.editChannel("498972753114824714", {name : "Welcome To Graphi"})
+BT.editChannel("498972753114824714", {name : "Welcome To Graphic"})
 
 
 }, 6000);
