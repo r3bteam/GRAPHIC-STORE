@@ -30,7 +30,6 @@ BT.editChannel("498972753114824714", {name : "Welcome To Graphic"})
 });
 var eris = new Eris(process.env.BOT_TOKEN);
  
-const Eris = require("eris");
 var bot = new Eris(process.env.BOT_TOKEN);
 var id = "499232099577102357";
 //لا تعدل ولا شي تحت ذا//
