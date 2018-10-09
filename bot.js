@@ -28,7 +28,7 @@ BT.editChannel("498972753114824714", {name : "Welcome To Graphic"})
 
 }, 6000);
 });
-
+var eris= "498956631501963264";
 var eris = new Eris(process.env.BOT_TOKEN);
  
 eris.on("ready", ready => {
