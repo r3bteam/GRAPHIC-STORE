@@ -26,44 +26,54 @@ BT.editChannel("498972753114824714", {name : "Welcome To Graphi"})
 BT.editChannel("498972753114824714", {name : "Welcome To Graphic"})
 
 
-}, 6000);
+}, 10000);
 });
-var eris= "498956631501963264";
 var eris = new Eris(process.env.BOT_TOKEN);
  
-eris.on("ready", ready => {
-setInterval(function(){
- 
-            var currentTime = new Date(),
-            hours = currentTime.getHours() + 0 ,
-            minutes = currentTime.getMinutes(),
-            seconds = currentTime.getSeconds(),
-            years = currentTime.getFullYear(),
-            month = currentTime.getMonth() + 1,
-            day = currentTime.getDate(),
-            week = currentTime.getDay();
-           
-             
- 
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            var suffix = "AM";
-            if (hours >= 12) {
-                suffix = "PM";
-                hours = hours - 12;
-            }
-            if (hours == 0) {
-                hours = 12;
-            }
-
-eris.editChannel("499232099577102357", {name : "Time   [" + hours + ":" + minutes  +" " + suffix + "]"}) 
-eris.editChannel("499232123207548942", {name : "Date " + "[" + day + "-" + month + "-" + years + "]"})
-
-
-
-
-}, 6000);
- 
+const Eris = require("eris");
+var bot = new Eris(process.env.BOT_TOKEN);
+var id = "499232099577102357";
+//لا تعدل ولا شي تحت ذا//
+bot.on("ready", () => {
+onstart();
 });
+
+function onstart(){
+
+setInterval(function(){
+
+var currentTime = new Date(),
+hours = currentTime.getHours() + 0 ,
+minutes = currentTime.getMinutes(),
+seconds = currentTime.getSeconds();
+
+if (minutes < 10) {
+minutes = "0" + minutes;
+}
+var suffix = "صباحاَ";
+if (hours >= 12) {
+suffix = "مساء";
+hours = hours - 12;
+}
+if (hours == 0) {
+hours = 12;
+}
+
+bot.editChannel(id, { name : "Time" + "الوقت : " + hours + ":" + minutes + " " + suffix + "."});
+}, 60000);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+bot.connect();
 client.login(process.env.BOT_TOKEN);
