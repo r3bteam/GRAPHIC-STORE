@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Eris = require("eris");
+client.connect(process.env.BOT_TOKEN);
 var iiserver = "498956631501963264";
 var smart= new Eris(process.env.BOT_TOKEN);
 
