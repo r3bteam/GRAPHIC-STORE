@@ -64,5 +64,4 @@ eris.editChannel("499232123207548942", {name : "Date " + "[" + day + "-" + month
 }, 6000);
  
 });
-
-client.connect(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
